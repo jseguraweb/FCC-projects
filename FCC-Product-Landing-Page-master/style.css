@@ -1,0 +1,736 @@
+/*------RESET-------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.landing::before,
+#courses::before,
+#fitnessCenter::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: skewY(3deg);
+    z-index: -5;
+}
+
+
+
+/*------MEDIA QUERY: TABLET AND MOBILE VIEW-------*/
+
+@media screen and (max-width: 768px) {
+
+    #desktopMenu {
+        display: none;
+    }
+
+
+    nav,
+    header,
+    section,
+    footer,
+    .container {
+        width: 100%;
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        position: relative;
+    }
+
+    .greenBackground {
+        background-color: #BFD641;
+    }
+
+    .blackBackground {
+        background-color: #000;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .logoName,
+    #buttonSubscribe,
+    .priceButton {
+        font-family: 'Allerta Stencil', sans-serif;
+        text-transform: uppercase;
+    }
+
+    .space {
+        padding: 5em 3em;
+    }
+
+
+    /*------NAVIGATION MENU-------*/
+
+    nav {
+        width: 100%;
+        height: 20vh;
+        background-color: #BFD641;
+        position: sticky;
+        top: 0;
+        box-shadow: 1px 1px 10px #000;
+        z-index: 99;
+    }
+
+    #mobileMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logoName {
+        float: left;
+        margin-left: 0.2em;
+        padding-bottom: 0.2em
+    }
+
+    .logoName a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1.5em;
+    }
+
+    .logoName img {
+        width: 65%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #toggleMenu {
+        width: 6em;
+        height: 5em;
+        padding-top: 0.5em;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 4em;
+        height: 0.5em;
+        background-color: #fff;
+        margin: 0.5em auto;
+        box-shadow: 1px 1px 5px #000;
+    }
+
+    #menuList {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 98;
+    }
+
+    li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: 400;
+        text-shadow: 1px 1px 10px #000;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    li a:hover {
+        font-weight: 600;
+    }
+
+    li {
+        text-transform: uppercase;
+        list-style-type: none;
+        padding: 2.75em 2em;
+    }
+
+    /*------LANDING PAGE-------*/
+
+    .landing {
+        background-image: url(img/action-athlete.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: 10;
+    }
+
+    main {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1em 0;
+    }
+
+    main h1 {
+        font-size: 7em;
+        line-height: 0.9em;
+        color: #BFD641;
+        text-shadow: 1px 1px 10px #000;
+    }
+
+    main h2 {
+        font-size: 1.6em;
+        color: #fff;
+        text-shadow: 1px 1px 10px #000;
+    }
+
+    #buttonSubscribe {
+        width: 10em;
+        height: auto;
+        padding: 0.5em;
+        margin-top: 1em;
+        background-color: #BFD641;
+        border: none;
+        text-shadow: 1px 1px 10px #000;
+        box-shadow: 1px 1px 10px #000;
+        cursor: pointer;
+        font-size: 1.2em;
+        color: #fff;
+    }
+
+
+    /*------SECTION COURSES-------*/
+
+    #courses {
+        flex-direction: column;
+        color: #fff;
+        position: relative;
+        z-index: 9;
+    }
+
+    .courseSection {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    .sports {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    .sports img {
+        width: 70vw;
+        height: auto;
+        border-radius: 1em;
+        display: block;
+        margin: 2em auto;
+    }
+
+
+    /*------SECTION FITNESS CENTER-------*/
+
+
+    #fitnessCenter {
+        height: auto;
+        padding: 9em 0;
+        background-image: url("img/weights4.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 8;
+    }
+
+    #fitnessCenter .container ul {
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 2em;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #fitnessCenter .container ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    .fitness-icon {
+        width: 3.5em;
+        height: auto;
+        margin: 0.5em;
+    }
+
+    /*------SECTION PRICES-------*/
+
+
+    #prices {
+        flex-direction: column;
+        height: auto;
+        padding: 7.5em 4em;
+    }
+
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .frame {
+        background-color: rgba(255, 255, 255, 0.7);
+        width: auto;
+        height: 20em;
+        margin: 1em;
+        border-radius: 2em;
+        padding: 2em 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        color: #000;
+    }
+
+    .frame img {
+        width: 8em;
+    }
+
+    .frame p {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .priceButton {
+        width: 100%;
+        height: auto;
+        padding: 0.5em;
+        background-color: #BFD641;
+        border: none;
+        border-radius: 2em;
+        cursor: pointer;
+        font-size: 1.5em;
+        color: #fff;
+        text-shadow: 1px 1px 5px #000;
+        box-shadow: 1px 1px 5px #000;
+    }
+
+
+    /*------CONTACT AND FOOTER-------*/
+
+    #contact {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5em 4em 0.5em 4em;
+        color: #fff;
+    }
+
+    #map {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .address {
+        width: 100%;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .socialNetwork img {
+        width: 3em;
+        height: auto;
+        margin-right: 1em;
+        cursor: pointer;
+    }
+
+    footer {
+        padding: 1em;
+        color: #fff;
+        flex-direction: column;
+    }
+
+    footer div {
+        width: 40%;
+        margin: 1em auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    footer .copyright {
+        margin: 0 auto;
+        padding: 1em 0 0 0;
+    }
+
+
+}
+
+
+
+/*------MEDIA QUERY: DESKTOP VIEW-------*/
+
+@media screen and (min-width: 768px) {
+
+
+    #toggleMenu {
+        display: none;
+    }
+
+    #mobileMenu {
+        display: none;
+    }
+
+    nav,
+    header,
+    section,
+    footer,
+    .container {
+        width: 100%;
+        height: auto;
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+    }
+
+    .greenBackground {
+        background-color: #BFD641;
+    }
+
+    .blackBackground {
+        background-color: #000;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .logoName,
+    #buttonSubscribe,
+    .priceButton {
+        font-family: 'Allerta Stencil', sans-serif;
+        text-transform: uppercase;
+    }
+
+    .space {
+        padding: 5em 3em;
+    }
+
+
+    /*------NAVIGATION MENU-------*/
+
+    nav {
+        width: 100%;
+        height: 20vh;
+        background-color: #BFD641;
+        position: fixed;
+        box-shadow: 1px 1px 10px #000;
+        z-index: 99;
+    }
+
+    .logoName {
+        float: left;
+        padding: 0.5em;
+        margin-left: 2em;
+    }
+
+    .logoName a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1.5em;
+    }
+
+    .logoName img {
+        width: 70%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 2em;
+    }
+
+    li a {
+        text-decoration: none;
+        color: #fff;
+        min-width: 1.5em;
+        font-weight: 400;
+        text-shadow: 1px 1px 10px #000;
+    }
+
+    li a:hover {
+        font-weight: 600;
+    }
+
+    li {
+        text-transform: uppercase;
+        list-style-type: none;
+        padding: 1em 2em;
+    }
+
+
+    /*------LANDING PAGE-------*/
+
+    .landing {
+        position: relative;
+        height: 100vh;
+        background-image: url(img/action-athlete.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+        position: relative;
+        text-align: center;
+    }
+
+    main h1 {
+        font-size: 10em;
+        color: #BFD641;
+        text-shadow: 1px 1px 10px #000;
+    }
+
+    main h2 {
+        font-size: 2.5em;
+        color: #fff;
+        text-shadow: 1px 1px 10px #000;
+    }
+
+    #buttonSubscribe {
+        width: 15em;
+        height: auto;
+        padding: 0.5em;
+        margin-top: 1.5em;
+        background-color: #BFD641;
+        border: none;
+        text-shadow: 1px 1px 10px #000;
+        box-shadow: 1px 1px 10px #000;
+        cursor: pointer;
+        font-size: 1.8em;
+        color: #fff;
+    }
+
+
+    /*------SECTION COURSES-------*/
+
+    #courses {
+        flex-direction: column;
+        color: #fff;
+        position: relative;
+        z-index: 9;
+    }
+
+    .courseSection {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2em 0;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 0.5em 0;
+        font-size: 2.5em;
+    }
+
+    .sports {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+
+        height: auto;
+        margin: ;
+    }
+
+    .sports img {
+        width: 30vw;
+        height: auto;
+        border-radius: 1em;
+        display: block;
+        margin: 2em auto;
+    }
+
+
+    /*------SECTION FITNESS CENTER-------*/
+
+
+    #fitnessCenter {
+        height: auto;
+        padding: 12em 0;
+        background-image: url("img/weights4.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 8;
+    }
+
+    #fitnessCenter .container ul {
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 80%;
+        height: 40vh;
+        margin: 0 auto;
+        border-radius: 2em;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #fitnessCenter .container ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    .fitness-icon {
+        width: 3.5em;
+        height: auto;
+        margin: 0.5em;
+    }
+
+    /*------SECTION PRICES-------*/
+
+
+    #prices {
+        flex-direction: column;
+        height: auto;
+        padding: 8em 4em;
+    }
+
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .frame {
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 30em;
+        height: 20em;
+        margin: 1em;
+        border-radius: 2em;
+        padding: 2em 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        color: #000;
+    }
+
+    .frame img {
+        width: 8em;
+    }
+
+    .frame p {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .priceButton {
+        width: 100%;
+        height: auto;
+        padding: 0.5em;
+        background-color: #BFD641;
+        border: none;
+        border-radius: 2em;
+        cursor: pointer;
+        font-size: 1.5em;
+        color: #fff;
+        text-shadow: 1px 1px 5px #000;
+        box-shadow: 1px 1px 5px #000;
+    }
+
+
+    /*------CONTACT AND FOOTER-------*/
+
+    #contact {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5em 4em 0.5em 4em;
+        color: #fff;
+    }
+
+    #map {
+        width: 50%;
+    }
+
+    .address {
+        width: 30%;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .socialNetwork img {
+        width: 3em;
+        height: auto;
+        margin-right: 1em;
+        cursor: pointer;
+    }
+
+    footer {
+        padding: 1em;
+        color: #fff;
+        flex-direction: column;
+    }
+
+    footer div {
+        width: 40%;
+        margin: 1em auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    footer .copyright {
+        margin: 0 auto;
+        padding: 1em 0 0 0;
+    }
+
+
+}

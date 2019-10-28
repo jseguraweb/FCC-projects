@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Fitty</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Desktop Nav Menu -->
+    <nav id="desktopMenu" class="greenBackground">
+        <div class="logoName">
+            <a href="#">
+                <p>MrFitty</p>
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+        <ul>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#fitnessCenter">Fitness center</a></li>
+            <li><a href="#prices">Prices</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!---------------------->
+    
+    <!-- Mobile Nav Menu -->
+    <nav id="mobileMenu" class="greenBackground">
+        <div class="logoName">
+            <a href="#">
+                <p>MrFitty</p>
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+        <div id="toggleMenu" onclick="myMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+    <ul id="menuList" class="greenBackground">
+        <li><a href="#courses" onclick="closeMenu()">Courses</a></li>
+        <li><a href="#fitnessCenter" onclick="closeMenu()">Fitness center</a></li>
+        <li><a href="#prices" onclick="closeMenu()">Prices</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+    <!---------------------->
+    
+    <header class="landing">
+        <main>
+            <h1>Mr Fitty</h1>
+            <h2>Your fitness center in Berlin</h2>
+            <p><input id="buttonSubscribe" type="submit" value="Subscribe"></p>
+        </main>
+    </header>
+
+    <section id="courses" class="blackBackground space">
+        <article class="container courseSection">
+            <div class="sports">
+                <h3>Yoga</h3>
+                <img src="img/yoga.jpg" alt="">
+                <p>Yoga is an old discipline from India. It is both spiritual and physical. Yoga uses breathing techniques, exercise and meditation. It helps to improve health and happiness.</p>
+            </div>
+
+            <div class="sports">
+                <h3>Spinning</h3>
+                <img src="img/spinning.jpg" alt="">
+                <p>Spinning may help you build muscle definition, in addition to burning unwanted body fat. Generally, spinning focuses on your core muscles, buttocks, and thighs.</p>
+            </div>
+        </article>
+
+        <article class="container courseSection">
+
+            <div class="sports">
+                <h3>Endurance</h3>
+                <img src="img/endurance.jpg" alt="">
+                <p>A well conditioned athlete can be defined as, the athlete who executes his or her technique consistently and effectively with the least effort.</p>
+            </div>
+
+            <div class="sports">
+                <h3>Zumba</h3>
+                <img src="img/zumba.jpg" alt="">
+                <p>With zumba you can burn calories, work out the entire body, boost the metabolism, increase endurance, boost mood, aid coordination, and improve confidence.</p>
+            </div>
+        </article>
+
+    </section>
+
+    <section id="fitnessCenter" class="space">
+        <div class="container">
+            <ul>
+                <li><img class="fitness-icon" src="img/icon-day-black.png" alt="">24/7 open</li>
+                <li><img class="fitness-icon" src="img/icon-energy-drink.png" alt="">Free drinks</li>
+                <li><img class="fitness-icon" src="img/icon-personal-trainer.png" alt="">Personal trainers</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="prices" class="greenBackground space">
+        <div class="wrapper">
+            <article class="frame">
+                <h4>1 day</h4>
+                <img src="img/icon-1-day.png" alt="">
+                <p>5,99€/day</p>
+                <input class="priceButton" type="button" value="subscribe">
+            </article>
+
+            <article class="frame">
+                <h4>1 month</h4>
+                <img src="img/icon-1-month.png" alt="">
+                <p>19,99€/month</p>
+                <input class="priceButton" type="button" value="subscribe">
+            </article>
+
+            <article class="frame">
+                <h4>1 year</h4>
+                <img src="img/icon-1-year.png" alt="">
+                <p>16,99€/month</p>
+                <input class="priceButton" type="button" value="subscribe">
+            </article>
+        </div>
+
+    </section>
+
+    <section id="contact" class="blackBackground">
+        <div id="map"><iframe width="" height="300" src=https://maps.google.de/maps?hl=de&q=%20storkower+str+32%20berlin&t=&z=10&ie=utf8&iwloc=b&output=embed frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style='height:300px;width:100%;'></iframe></div>
+        <div class="address">
+            <address>Musterstr 32, <br> 10409 Berlin</address>
+            <br>
+            <p>info@mrfitty.muster</p>
+            <br>
+            <p>030-1234567</p>
+            <br>
+            <div class="socialNetwork">
+                <img src="img/fb-icon.png" alt="">
+                <img src="img/instagram-icon.png" alt="">
+            </div>
+        </div>
+    </section>
+    <footer class="blackBackground">
+        <div>
+            <p>Privacy statement</p>
+            <p>Legal notice</p>
+        </div>
+        <p class="copyright">&copy2019 Mr Fitty. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        
+        var x = document.getElementById('menuList');
+    
+        function myMenu() {
+            if (x.style.display != 'flex'){
+                x.style.display = 'flex';
+            } else {
+                x.style.display = 'none';
+            }          
+        }
+        
+        function closeMenu() {
+            if (x.style.display === 'flex'){
+                x.style.display = 'none';
+            }            
+        }
+        
+        
+    </script>
+</body></html>
